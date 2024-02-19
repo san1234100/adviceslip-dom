@@ -1,6 +1,6 @@
-# Your App Title
+# Advice Slip App
 
-Write app description in detail!
+Simple Advice app suggest advices randomly
 
 #### Screenshots
 
@@ -8,8 +8,6 @@ Write app description in detail!
 
 ## 🎉 Check it yourself!
 
-| 🚧 Build Status  | [![Netlify Status](https://img.shields.io/github/actions/workflow/status/anburocky3/festival-greeting-app/deploy.yml?logo=github&label=Live)](https://app.netlify.com/sites/cyberdude-internship/deploys) |
-| ---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ✅ Live Website: | https://anburocky3.github.io/vite-html-tailwind                                                                                                                                                           |
 
 ---
