@@ -25,34 +25,37 @@
 //  console.log("Welcome to our program");
 // }
 // getResolution()
-const blockQuoteEl = document.querySelector("blockquote");
-const xhr = new XMLHttpRequest();
-xhr.responseType = "json";
-xhr.onreadystatechange = function () {
-  if (this.readyState == 4 && this.status == 200) {
-    // const adviceObj=JSON.parse(xhr.responseText);
+// const blockQuoteEl = document.querySelector("blockquote p");
+// const xhr = new XMLHttpRequest();
+// xhr.responseType = "json";
+// xhr.onreadystatechange = function () {
+//   if (this.readyState == 4 && this.status == 200) {
+//     // const adviceObj=JSON.parse(xhr.responseText);
 
-    const adviceObj = xhr.response;
+//     const adviceObj = xhr.response;
 
-    blockQuoteEl.innerText = adviceObj.slip.advice;
-  }
-};
+//     blockQuoteEl.innerText = adviceObj.slip.advice;
+//   }
+// };
 
-xhr.open("GET", "https://api.adviceslip.com/advice");
-xhr.send();
+// xhr.open("GET", "https://api.adviceslip.com/advice");
+// xhr.send();
 
 // const result = fetch("https://api.adviceslip.com/advice");
 // result.then((res) => res.json())
 // .then((val) => val.slip.advice);
-
+const blockQuoteEl = document.querySelector("blockquote p");
 async function getAdvices(){
     try {
         const result = await fetch("https://api.adviceslip.com/advice");
         const json = await result.json();
-        console.log(json);
+        blockQuoteEl.innerText = json.slip.advice;
       } catch (err) {
         console.log(err);
       }
       
 }
-getAdvices()
+// getAdvices() 
+
+const adviceBtn=document.getElementById('adviceBtn');
+adviceBtn.addEventListener("click",getAdvices)
